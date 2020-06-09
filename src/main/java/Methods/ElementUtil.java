@@ -1,8 +1,11 @@
 package Methods;
 
+import java.util.function.ToDoubleBiFunction;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -58,6 +61,18 @@ public class ElementUtil {
 	}
 	
 	/**
+	 * This method is used to get element
+	 * @param driver
+	 * @param locator
+	 * @return
+	 */
+	public static WebElement getElement(WebDriver driver, By locator) {
+		WebElement element = driver.findElement(locator);
+		return element;
+		
+	}
+	
+	/**
 	 * This method is used to get title
 	 * @param driver
 	 * @return
@@ -76,12 +91,22 @@ public class ElementUtil {
 	}
 	
 	/**
+	 * This method is used to close browser
+	 * @param driver
+	 */
+	public static void closeBrowser(WebDriver driver) {
+		driver.close();
+	}
+	
+	/**
 	 * This method is used to quit browser
 	 * @param driver
 	 */
 	public static void quitBrowser(WebDriver driver) {
 		driver.quit();
 	}
+	
+	
 	
 	
 
