@@ -4,16 +4,22 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Sel_004_AlertHandling_1 {
+	
+	public static WebDriver driver;
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().browserVersion("80.0.3987.16").setup();
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.setHeadless(false);
+        driver = new ChromeDriver(chromeOptions);
 		
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 		
