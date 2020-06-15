@@ -14,7 +14,7 @@ public class Sel_004_AlertHandling_1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		WebDriverManager.chromedriver().browserVersion("80.0.3987.16").setup();
+		WebDriverManager.chromedriver().browserVersion("81.0.4044.138").setup();
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.setHeadless(false);
         driver = new ChromeDriver(chromeOptions);

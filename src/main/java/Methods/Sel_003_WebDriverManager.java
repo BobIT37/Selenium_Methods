@@ -12,7 +12,7 @@ public class Sel_003_WebDriverManager {
 		//Set property
 		//System.setProperty("webdriver.chrome.driver", "/Users/bobit/Documents/Drivers/chromedriver");
 		
-		WebDriverManager.chromedriver().browserVersion("81.0.4044.138").setup();
+		WebDriverManager.chromedriver().browserVersion("80.0.3987.16").setup();
 		
 		WebDriver driver = new ChromeDriver();
 		

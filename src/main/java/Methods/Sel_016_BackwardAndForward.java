@@ -3,7 +3,7 @@ package Methods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Sel_16_BackwardAndForward {
+public class Sel_016_BackwardAndForward {
 	
 	
 public static void main(String[] args) throws InterruptedException {
