@@ -1,6 +1,6 @@
 package Methods;
 
-import java.util.function.ToDoubleBiFunction;
+
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * 
@@ -67,8 +69,16 @@ public class ElementUtil {
 	 * @return
 	 */
 	public static WebElement getElement(WebDriver driver, By locator) {
+		waitForPresenceOfElement(driver, locator);
 		WebElement element = driver.findElement(locator);
 		return element;
+		
+	}
+	
+    public static void waitForPresenceOfElement(WebDriver driver, By locator) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		
 	}
 	
