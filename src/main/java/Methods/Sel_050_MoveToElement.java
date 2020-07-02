@@ -24,8 +24,8 @@ public class Sel_050_MoveToElement {
 		
 		By smartPhone = By.id("thirdLevel00");
 		WebElement locator = driver.findElement(smartPhone);
-		//locator.click();
-		actions.click().build().perform();
+		locator.click();
+		//actions.click().build().perform();
 
 	}
 
